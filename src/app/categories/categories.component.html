@@ -1,0 +1,10 @@
+<div >
+  <ul *ngFor="let item of categories | topics">
+    <a routerLink="{{item[1]}}" routerLinkActive="active" >
+<div class="category">
+  {{item[0]}}:{{item[1]}}
+</div>
+      </a>
+  </ul>
+</div>
+<router-outlet></router-outlet>
