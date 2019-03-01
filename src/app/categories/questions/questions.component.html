@@ -1,3 +1,7 @@
-<p>
-  questions works!
-</p>
+<div >
+  <ul *ngFor="let question of questions" >
+<div class="question">
+  <div (click)='openDialog()'> {{question}}</div>
+</div>
+  </ul>
+</div>

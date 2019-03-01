@@ -6,13 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-list: Array<any> = ["About", "Categories"];;
+list: Array<any> = ["About", "Categories"];
   constructor() {
-    //this.list = ["About", "Catergories"];
   }
 
   ngOnInit() {
   }
-
-
 }

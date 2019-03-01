@@ -4,7 +4,6 @@ import { Pipe, PipeTransform } from '@angular/core';
 
 export class topicExtract implements PipeTransform{
   transform(value: any): any {
-      console.log(Object.entries(value));
         return Object.entries(value);//.map(key => value[key]);
     }
 }

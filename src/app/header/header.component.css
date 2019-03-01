@@ -6,7 +6,8 @@
   color: white;
   line-height: 2;
   padding: 10px;
-  border: 1px solid white;
+  border: 1px solid gray;
+  border-radius: 10px;
 }
 a { color: #FFFFFF; }
 .navBar{
@@ -14,5 +15,5 @@ a { color: #FFFFFF; }
 }
 
 .navBar ul h4:hover{
-  background-color: #FF0000;
+  background-color: gray;
 }

@@ -9,10 +9,11 @@ import { QuestionsComponent } from './categories/questions/questions.component';
 import { QuestionsAndAnswersComponent } from './categories/questions-and-answers/questions-and-answers.component';
 import { AboutComponent } from './about/about.component';
 import { topicExtract } from './categories/topicExtract'
-
+import {MatDialogModule} from '@angular/material/dialog';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 const appRoutes: Routes = [
-  { path: '', redirectTo: 'About', pathMatch: 'full' },
+  //{ path: '', redirectTo: 'About', pathMatch: 'full' },
   { path: 'About', component:  AboutComponent},
   { path: 'Categories',
     component:  CategoriesComponent
@@ -23,9 +24,9 @@ const appRoutes: Routes = [
     //   { path: 'Vue.js', component:  QuestionsAndAnswersComponent}
     // ]
   },
-    { path: 'Categories/Angular5', component:  QuestionsComponent},
-    { path: 'Categories/ReactJs', component:  QuestionsComponent},
-    { path: 'Categories/Vue.js', component:  QuestionsComponent}
+    { path: 'Categories/Angular5', component:  QuestionsComponent, data: {title: 'Angular5'}},
+    { path: 'Categories/ReactJs', component:  QuestionsComponent, data: {title: 'ReactJs'}},
+    { path: 'Categories/Vue.js', component:  QuestionsComponent, data: {title: 'Vue.js'}}
 ];
 
 @NgModule({
@@ -40,11 +41,16 @@ const appRoutes: Routes = [
   ],
   imports: [
     BrowserModule,
+    MatDialogModule,
+    BrowserAnimationsModule,
     RouterModule.forRoot(
        appRoutes
       // { enableTracing: true } // <-- debugging purposes only
     )
   ],
+  entryComponents: [
+        QuestionsAndAnswersComponent
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })
