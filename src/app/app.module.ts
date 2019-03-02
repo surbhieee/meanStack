@@ -9,8 +9,10 @@ import { QuestionsComponent } from './categories/questions/questions.component';
 import { QuestionsAndAnswersComponent } from './categories/questions-and-answers/questions-and-answers.component';
 import { AboutComponent } from './about/about.component';
 import { topicExtract } from './categories/topicExtract'
-import {MatDialogModule} from '@angular/material/dialog';
+import {MatDialogModule} from '@angular/material/';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatFormFieldModule } from '@angular/material';
+import { MatInputModule } from '@angular/material';
 
 const appRoutes: Routes = [
   //{ path: '', redirectTo: 'About', pathMatch: 'full' },
@@ -40,6 +42,8 @@ const appRoutes: Routes = [
     topicExtract
   ],
   imports: [
+    MatFormFieldModule,
+    MatInputModule,
     BrowserModule,
     MatDialogModule,
     BrowserAnimationsModule,

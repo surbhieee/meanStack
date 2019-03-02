@@ -1,8 +1,15 @@
 
-<h2 mat-dialog-title>Delete all</h2>
-<mat-dialog-content>  questions-and-answers works!</mat-dialog-content>
+<h2 mat-dialog-title>Answer</h2>
+<mat-dialog-content>questions-and-answers works!</mat-dialog-content>
+<mat-form-field>
+  <mat-label></mat-label>
+<input placeholder="Just a placeholder" type="text" onContainerClick>
+</mat-form-field>
 <mat-dialog-actions>
-  <button mat-button mat-dialog-close>No</button>
-  <!-- The mat-dialog-close directive optionally accepts a value as a result for the dialog. -->
-  <button mat-button [mat-dialog-close]="true">Yes</button>
+  <div class="size">
+    <button class="btnsize" mat-button mat-dialog-close>No</button>
+  </div>
+  <div class="size">
+  <button class="btnsize"mat-button [mat-dialog-close]="true">Yes</button>
+  </div>
 </mat-dialog-actions>
