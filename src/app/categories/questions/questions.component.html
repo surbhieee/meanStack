@@ -1,7 +1,10 @@
 <div >
   <ul *ngFor="let question of questions" >
 <div class="question">
-  <div (click)='openDialog()'> {{question}}</div>
+
+  <div (click)='openDialog(question.question)' >{{question.question}}</div>
+
+  <span>Answer: </span><span class="">{{question.answer}}</span>
 </div>
   </ul>
 </div>
